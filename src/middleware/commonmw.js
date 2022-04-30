@@ -1,4 +1,4 @@
-const jwt = require["jsonwebtoken"];
+const jwt = require("jsonwebtoken");
 
 const authenticate = function (req,res,next){
     try{
@@ -7,10 +7,10 @@ const authenticate = function (req,res,next){
         res.status(401).send({status: false, message: "Mandatory authentication header missing"});
         }
         else{
-            let decodedToken = jwt.verify(authToken,"Radium");
+            let decodedToken = jwt.verify(authToken,"Login");
             if(decodedToken){
                 req.user= decodedToken
-                console.log("Token:-", decodedToken)
+                console.log("Token:-",decodedToken)
                 next();
             } else {
                 res.status(401).send({ status: false, message:"The authentication token is invalid"});

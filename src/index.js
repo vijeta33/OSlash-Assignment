@@ -11,13 +11,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-
-
-
 const mongoose = require('mongoose');
 const { response } = require('express');
 
-mongoose.connect("mongodb+srv://monty-python:SnYUEY4giV9rekw@functionup-backend-coho.0zpfv.mongodb.net/vijetahiwarkar_db?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://user-open-to-all:hiPassword123@cluster0.xgk0k.mongodb.net/<Akash_kumar_sah_Db?retryWrites=true&w=majority", { useNewUrlParser: true })
     .then(() => console.log('mongodb running on 27017'))
     .catch(err => console.log(err))
 
